@@ -1,13 +1,28 @@
 <template>
   <div class='todo-item'>
     <div class='todo-itme-content-title'>
-      犬の散歩
+      {{ title }}
     </div>
     <div class='todo-item-content-description'>
-      動物園の近くまで行く
+      {{ description }}
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true,
+      default: 'Default Description'
+    }
+  }
+}
+</script>
 <style lang="scss">
   .todo {
     &-item {
