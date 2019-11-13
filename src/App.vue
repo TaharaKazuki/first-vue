@@ -10,21 +10,19 @@
         </div>
       </div>
     </div>
-    <div class="modal">
-      <div class="modal-content">
-        Modal Window
-      </div>
-    </div>
+    <Modal />
   </div>
 </template>
 
 
 <script>
 import TodoList from './components/TodoList.vue'
+import Modal from './components/Modal.vue'
 export default {
   name: 'app',
   components: {
-    TodoList
+    TodoList,
+    Modal
   },
   data() {
     return {
