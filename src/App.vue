@@ -5,7 +5,7 @@
         <todo-list :todos="todos" />
         <div class="todo-create-btn-container">
           <div 
-            @click="openModal"
+            @click="isModalOpen = true"
             class="app-button"
           >
             Create
@@ -13,7 +13,10 @@
         </div>
       </div>
     </div>
-    <Modal :isOpen="isModalOpen" />
+    <Modal 
+      @modalClosed="isModalOpen = false"
+      :isOpen="isModalOpen" 
+    />
   </div>
 </template>
 
@@ -49,11 +52,11 @@ export default {
       ]
     }
   },
-  methods: {
-    openModal() {
-      this.isModalOpen = !this.isModalOpen
-    }
-  }
+  // methods: {
+  //   openModal() {
+  //     this.isModalOpen = !this.isModalOpen
+  //   }
+  // }
 }
 </script>
 
