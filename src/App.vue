@@ -1,18 +1,56 @@
 <template>
   <div id="app">
-    <h1>Hello world</h1>
+    <div class='todo-wrapper'>
+      <div class='todo-container'>
+        <div class='todo-list'>
+          <div class='todo-item'>
+            <div class='todo-item-content'>
+              <div class='todo-item-content-title'>
+                犬の散歩
+              </div>
+              <div class='todo-item-content-description'>
+                近くの動物園に行く
+              </div>
+            </div>
+          </div>
+          <div class='todo-item'>
+            <div class='todo-item-content'>
+              <div class='todo-item-content-title'>
+                パンを買う
+              </div>
+              <div class='todo-item-content-description'>
+                全粒粉のパンがおすすめ
+              </div>
+            </div>
+          </div>
+          <div class='todo-item'>
+            <div class='todo-item-content'>
+              <div class='todo-item-content-title'>
+                プログラミング学習
+              </div>
+              <div class='todo-item-content-description'>
+                明日より良くなるように
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app'
 }
 </script>
 
-<style>
+<style lang='scss'>
+$color-red: red;
+
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,5 +58,31 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.todo-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.todo-container {
+  width: 400px;
+  min-height: 400px;
+  background-color: #ededed;
+  border-radius: 5px;
+}
+.todo-item {
+  background-color: gray;
+  min-height: 70px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 23px;
+}
+.todo-item-content-title {
+  font-weight: bold;
+}
+.todo-item-content-description {
+  font-size: 19px;
 }
 </style>
